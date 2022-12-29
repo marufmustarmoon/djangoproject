@@ -1,0 +1,19 @@
+run * pip install PyMySQL command to run sqlmodel.py to save json data to mysql.
+also run * pip install mysqlclient.
+create database name json and table name demofrontend_value and table value date,trade_code,high,low,openn,close,volume accordingly.
+
+then run sqlmodel.py.
+it will automaticaly add json object value in mysql.
+
+
+
+
+to run django 
+run command 
+
+"python manage.py makemigrations demofrontend"   
+"python manage.py migration"                      // it will auto add sql database
+"python manage.py runserver"
+
+address:http://127.0.0.1:8000/demofrontend/        //otherwise it will show error.
+

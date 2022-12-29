@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    {% include 'demofrontend/navbar.html'%}
+
+    
+     
+     
+
+           
+    
+       
+         
+          <div class="container mt-3">
+            
+            <form action="/demofrontend/addd/{{moon.id}}" method="POST">
+              {% csrf_token %}
+              <div class="mb-2">
+                <input
+                  type="date"
+                  placeholder="Date"
+                  class="form-control"
+                  name="date"
+                  id=""
+                  required value = {{ moon.date }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="Trade Code"
+                  class="form-control"
+                  name="trade_code"
+                  id=""
+                  required value = {{ moon.trade_code }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="High"
+                  class="form-control"
+                  name="high"
+                  id=""
+                  required value = {{ moon.high }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="Low"
+                  class="form-control"
+                  name="low"
+                  id=""
+                  required value = {{ moon.low }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="Open"
+                  class="form-control"
+                  name="openn"
+                  id=""
+                  required value = {{ moon.openn }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="close"
+                  class="form-control"
+                  name="close"
+                  id=""
+                  required value = {{ moon.close }}
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  placeholder="Volume"
+                  class="form-control"
+                  name="volume"
+                  id=""
+                  required value = {{ moon.volume }}
+                />
+              </div>
+
+              <div class="mb-2">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+              
+            </form>
+           
+          </div>
+          
+        
+ 
+          
+       
+      
+    
+   
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+    
+  </body>
+</html>
